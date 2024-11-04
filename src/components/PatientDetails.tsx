@@ -24,7 +24,7 @@ export default function  PatientDetails({ patient }: PatientDetailsProps) {
         <div>
             <PatientDetailItem label="ID" data={patient.id} />
             <PatientDetailItem label="Nombre" data={patient.name} />
-            <PatientDetailItem label="Propietario" data={patient.cartaker} />
+            <PatientDetailItem label="Propietario" data={patient.caretaker} />
             <PatientDetailItem label="Email" data={patient.email} />
             <PatientDetailItem label="Fecha Alta" data={patient.date.toString()} />
             <PatientDetailItem label="Síntomas" data={patient.symptoms} />

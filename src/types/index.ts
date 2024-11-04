@@ -1,7 +1,7 @@
 export type Patient = {
     id: string
     name: string
-    cartaker: string
+    caretaker: string
     email: string
     date: Date
     symptoms: string
