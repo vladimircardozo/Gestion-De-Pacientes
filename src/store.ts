@@ -1,3 +1,9 @@
+// Este store permite gestionar una lista de pacientes con funcionalidad para:
+// Añadir un paciente nuevo.
+// Borrar un paciente.
+// Seleccionar un paciente (getPatientById).
+// Actualizar un paciente seleccionado.
+
 import { create } from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
 import { v4 as uuidv4 } from 'uuid'
@@ -19,8 +25,10 @@ const createPatient = (patient: DraftPatient) : Patient => {
 export const usePatientStore = create<PatientState>()(
     devtools(
     persist( (set) => ({
+        // Estado inicial
         patients: [],
         activeId: '',
+        // Métodos para manipular el estado
         addPatient: (data) => {
             const newPatient = createPatient(data)
             set((state) => ({
